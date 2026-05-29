@@ -1,0 +1,65 @@
+{
+  "api": {
+    "description": "B站评论查询API配置",
+    "type": "object",
+    "hint": "可自定义API地址和请求超时时间",
+    "items": {
+      "base_url": {
+        "description": "API基础URL",
+        "type": "string",
+        "default": "https://api.syrds.pro",
+        "hint": "若接口迁移可自行替换，无需末尾斜杠"
+      },
+      "timeout": {
+        "description": "请求超时时间（秒）",
+        "type": "int",
+        "default": 30,
+        "hint": "API请求超时等待时间"
+      }
+    }
+  },
+  "page": {
+    "description": "分页默认值",
+    "type": "object",
+    "hint": "控制查询时的默认分页参数",
+    "items": {
+      "default_page_size": {
+        "description": "默认每页条数",
+        "type": "int",
+        "default": 20,
+        "hint": "用户未指定每页条数时使用"
+      },
+      "max_page_size": {
+        "description": "最大每页条数",
+        "type": "int",
+        "default": 50,
+        "hint": "防止图片过长，数值不宜过大"
+      }
+    }
+  },
+  "render": {
+    "description": "图片渲染选项",
+    "type": "object",
+    "hint": "控制生成评论图片的超时和样式",
+    "items": {
+      "timeout": {
+        "description": "渲染超时（秒）",
+        "type": "int",
+        "default": 30,
+        "hint": "HTML转图片的超时时间"
+      },
+      "show_all_names": {
+        "description": "显示用户曾用名",
+        "type": "bool",
+        "default": true,
+        "hint": "是否在图片顶部显示历史昵称"
+      }
+    }
+  },
+  "proxy": {
+    "description": "HTTP代理地址",
+    "type": "string",
+    "default": "",
+    "hint": "如 http://127.0.0.1:7890 ，留空则不使用代理"
+  }
+}

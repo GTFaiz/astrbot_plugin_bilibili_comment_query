@@ -1,0 +1,5 @@
+name: astrbot_plugin_bilibili_comment_query
+author: GTFaiz
+description: 查询B站指定UID用户最近评论，支持自定义页数和每页条数，并以图片形式展示用户曾用名、评论内容等。
+version: 1.0.0
+repo: 
